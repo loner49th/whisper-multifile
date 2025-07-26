@@ -115,7 +115,7 @@ print("-" * 50)
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
 
-model_id = "openai/whisper-large-v3"
+model_id = "openai/whisper-large-v3-turbo"
 
 print(f"デバイス: {device}")
 print("モデルを読み込み中...")
