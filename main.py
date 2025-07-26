@@ -60,7 +60,10 @@ def process_batch(pipe, audio_files, batch_size, generate_kwargs):
         
         try:
             # バッチ処理
-            results = pipe(batch, batch_size=len(batch), **generate_kwargs)
+            if generate_kwargs:
+                results = pipe(batch, batch_size=len(batch), generate_kwargs=generate_kwargs)
+            else:
+                results = pipe(batch, batch_size=len(batch))
             
             # 結果を整理
             for j, result in enumerate(results):
