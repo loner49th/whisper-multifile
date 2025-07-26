@@ -30,7 +30,7 @@ cd whisper-multifile
 
 2. 依存関係をインストール（uvを使用）：
 ```bash
-uv add torch transformers python-dotenv
+uv sync
 ```
 
 ## 設定
@@ -57,7 +57,7 @@ RETURN_TIMESTAMPS=true
 ## 使用方法
 
 ```bash
-python main.py
+uv run python main.py
 ```
 
 ## 対応ファイル形式

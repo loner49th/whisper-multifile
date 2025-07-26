@@ -1,0 +1,15 @@
+[project]
+name = "whisper-multifile"
+version = "0.1.0"
+description = "OpenAI Whisper large-v3モデルを使用した複数音声ファイル一括音声認識ツール"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "torch",
+    "transformers",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
