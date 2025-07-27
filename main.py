@@ -33,7 +33,10 @@ def save_results_to_file(results, output_path):
 def process_audio_file(pipe, audio_file, generate_kwargs):
     """単一の音声ファイルを処理（エラーハンドリング付き）"""
     try:
-        result = pipe(audio_file, **generate_kwargs)
+        if generate_kwargs:
+            result = pipe(audio_file, generate_kwargs)
+        else:
+            result = pipe(audio_file)
         return {
             "file": os.path.basename(audio_file),
             "status": "success",
